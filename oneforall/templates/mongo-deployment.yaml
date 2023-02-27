@@ -15,9 +15,9 @@ spec:
           ports:
             - containerPort: {{ .Values.mongo.port }}
           volumeMounts:
-            - name: storage
+            - name: {{ .Values.volume.name1 }}
               mountPath: /data/db
       volumes:
-        - name: storage
+        - name: {{ .Values.volume.name1 }}
           persistentVolumeClaim:
             claimName: {{ .Values.volume.name }}

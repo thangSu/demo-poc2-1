@@ -15,6 +15,7 @@ client:
 volume:
   name: mongo-pvc
   storage: 256Mi
+  name1: storage
 mongo:
   name: mongo
   repCount: 1
